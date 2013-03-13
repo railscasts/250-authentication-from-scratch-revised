@@ -12,4 +12,21 @@ class UsersController < ApplicationController
       render "new"
     end
   end
+
+  ######                                                   
+  # The code below added for user login information update by Nur Sah Ketene 
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+
+    if @user.update_attributes(params[:user])
+      redirect_to root_url, notice: "Your information is updated!"
+    else
+      render "edit"
+    end
+  end
 end

@@ -5,6 +5,11 @@ class User < ActiveRecord::Base
   
   validates_uniqueness_of :email
 
+  ######
+  # The code below added by Nur Sah Ketene for writing appropriate tests
+  # for user authentication for those who are interested to learn how to
+  # test their applications. 
+
   ##
   # Validating presence of password on create. If you want to validate the password 
   # both on create and update remove "on: :create"

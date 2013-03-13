@@ -20,6 +20,7 @@ class UsersControllerTest < ActionController::TestCase
         password_confirmation: @user.password_confirmation}
     end
     assert_redirected_to root_url
+    assert session[:user_id].present?
     assert_equal "Thank you for signing up!", flash[:notice]
   end
 

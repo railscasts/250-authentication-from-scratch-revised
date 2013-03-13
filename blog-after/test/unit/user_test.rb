@@ -10,7 +10,7 @@ class UserTest < ActiveSupport::TestCase
   end
   test "should not save the same email" do
     @user.save
-    invalid_user = User.new(  email: user.email, 
+    invalid_user = User.new(  email: @user.email, 
                               password: "1234", 
                               password_confirmation: "1234")
 
@@ -22,6 +22,13 @@ class UserTest < ActiveSupport::TestCase
     @user.password = ""
     assert @user.invalid?
     assert !@user.save
+  end
+
+  test "should not require password for update" do
+    @user.save
+    @user.email = "example2@email.com"
+    assert @user.valid?
+    assert @user.save
   end
   
 end

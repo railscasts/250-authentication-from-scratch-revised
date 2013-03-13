@@ -20,6 +20,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "should not save without password" do
     @user.password = ""
+    @user.password_confirmation = ""
     assert @user.invalid?
     assert !@user.save
   end

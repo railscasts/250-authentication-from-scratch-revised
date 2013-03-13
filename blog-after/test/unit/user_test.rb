@@ -31,5 +31,11 @@ class UserTest < ActiveSupport::TestCase
     assert @user.valid?
     assert @user.save
   end
+
+  test "should not save with invalid email" do
+    @user.email = "invalid"
+    assert @user.invalid?
+    assert !@user.save
+  end
   
 end

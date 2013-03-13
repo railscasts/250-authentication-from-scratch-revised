@@ -31,4 +31,23 @@ class UsersControllerTest < ActionController::TestCase
     assert_template :new
   end
 
+  test "should get edit" do
+    @user.save
+    get :edit, id: @user.id
+    assert :success
+  end
+
+  test "should update user" do
+    @user.save
+    put :update, id: @user.id, user: { email: "changed@email.com" }
+    assert_response :redirect
+    assert_redirected_to root_url
+    assert_equal "Your information is updated!", flash[:notice]
+  end
+
+  test "should not update user with invalid params" do
+    @user.save
+    put :update, id: @user.id, user: { email: "invalid" }
+    assert_template :edit
+  end
 end

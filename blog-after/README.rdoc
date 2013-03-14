@@ -7,3 +7,10 @@ Run these commands to try it out.
   rails s
 
 Requires Ruby 1.9.2 or later to run.
+
+
+Tests for authentication added with some code for better authentication by Nur Sah Ketene
+Tests added: 
+  Unit Tests
+  Functional Tests
+  

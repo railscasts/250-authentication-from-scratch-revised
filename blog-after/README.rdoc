@@ -9,7 +9,7 @@ Run these commands to try it out.
 Requires Ruby 1.9.2 or later to run.
 
 
-h2. Tests for authentication added with some code by Nur Sah Ketene
+== Tests for authentication added with some code by Nur Sah Ketene
 
 Tests added: 
 

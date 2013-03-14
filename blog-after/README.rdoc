@@ -9,8 +9,15 @@ Run these commands to try it out.
 Requires Ruby 1.9.2 or later to run.
 
 
-Tests for authentication added with some code for better authentication by Nur Sah Ketene
+= Tests for authentication added with some code by Nur Sah Ketene
+
 Tests added: 
-  Unit Tests
-  Functional Tests
+
+  test/unit/user_test.rb
+  test/functional/users_controller_test.rb
+
+Code Added: 
+  
+  app/models/user.rb
+  app/controllers/users_controller.rb
   
